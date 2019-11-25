@@ -1,0 +1,22 @@
+{
+  "name": "proyecto-backend-node-platzi",
+  "version": "1.0.0",
+  "description": "Proyecto del curso avanzado de backend con NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodingCarlos/proyecto-backend-node-platzi.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodingCarlos/proyecto-backend-node-platzi/issues"
+  },
+  "homepage": "https://github.com/CodingCarlos/proyecto-backend-node-platzi#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
