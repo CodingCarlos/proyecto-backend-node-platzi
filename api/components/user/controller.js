@@ -43,15 +43,14 @@ module.exports = function (injectedStore, injectedCache) {
             user.id = nanoid();
         }
 
-        if (body.password || body.username) {
-            await auth.upsert({
+
+        return await auth.upsert({
                 id: user.id,
                 username: user.username,
                 password: body.password,
             })
-        }
 
-        return store.upsert(TABLA, user);
+
     }
 
     function follow(from, to) {
@@ -65,7 +64,6 @@ module.exports = function (injectedStore, injectedCache) {
         const join = {}
         join[TABLA] = 'user_to'; // { user: 'user_to' }
         const query = { user_from: user };
-		
 		return await store.query(TABLA + '_follow', query, join);
 	}
 
